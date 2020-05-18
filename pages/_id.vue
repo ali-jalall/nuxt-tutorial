@@ -1,16 +1,15 @@
 <template>
-  <section class="directory">
+  <section class="directory" v-if="directory">
     <h1 class="directory__name">{{ directory.name }}</h1>
     <p class="directory__info">{{ directory.info }}</p>
   </section>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   name: "directory-info",
-  data() {
-    return {
-      directory: this.$route.params.dir
-    };
+  computed: {
+    ...mapState(['directory'])
   }
 };
 </script>
