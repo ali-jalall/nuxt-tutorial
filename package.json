@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "storyblok-nuxt": "^1.2.0"
+    "storyblok-nuxt": "^1.2.0",
+    "vuex-persist": "^2.2.0"
   },
   "devDependencies": {
     "css-loader": "^3.5.3",
