@@ -106,4 +106,8 @@ export default {
   color: #000;
   text-decoration: none;
 }
+
+.home__heading {
+  text-align: center;
+}
 </style>
