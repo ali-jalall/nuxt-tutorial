@@ -2,11 +2,17 @@
   <section class="home">
     <h1 class="home__heading">About Nuxtjs Directory Structure</h1>
     <div class="directories">
-      <div class="directory__container" v-for="directory in directories" :key="directory.id">
+      <div
+        class="directory__container"
+        v-for="directory in directories"
+        :key="directory.id"
+        @click.prevent="storeDirectory(directory)"
+      >
         <p class="directory__name">
           <nuxt-link
             :to="{ name: 'id', params: { id: directory.id, dir: directory } }"
-          >{{ directory.name }}</nuxt-link>
+            >{{ directory.name }}</nuxt-link
+          >
         </p>
       </div>
     </div>
@@ -68,6 +74,13 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    storeDirectory(dir) {
+      this.$store.commit("setDirectory", {
+        directory: dir
+      });
+    }
   }
 };
 </script>
@@ -89,7 +102,7 @@ export default {
   display: flex;
   align-content: center;
   justify-content: center;
-  border: 2px solid #A8EBD8;
+  border: 2px solid #a8ebd8;
   border-radius: 4px;
   margin: 8px 6px;
   cursor: pointer;
