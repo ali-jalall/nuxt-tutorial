@@ -21,7 +21,7 @@ export default {
   border-radius: 4px;
   border: 1px solid #00c58e;
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: 10px 0px;
   font-family: 'Poppins';
 }
 
